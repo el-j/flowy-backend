@@ -1,0 +1,327 @@
+{
+    "projectId": "flowy2sketch2flowy",
+    "name": "flowy2sketch2flowy",
+    "description": "flowy2sketch2flowy",
+    "files": [],
+    "projectJson": {
+        "offset": {
+            "x": -960.29,
+            "y": -480.58
+        },
+        "nodes": {
+            "node1": {
+                "id": "node1",
+                "type": "node",
+                "name": "Flowy App",
+                "text": "the flowy frontend browser app",
+                "displayType": "screen",
+                "path": "/no_image.png",
+                "picture": "no_image.png",
+                "position": {
+                    "x": 1983.872049689441,
+                    "y": 1331.0619047619048
+                },
+                "size": {
+                    "width": 500,
+                    "height": 353
+                },
+                "ports": {
+                    "port1": {
+                        "connected": false,
+                        "from": "",
+                        "id": "port1",
+                        "position": {
+                            "x": 235,
+                            "y": 353
+                        },
+                        "properties": {},
+                        "to": "",
+                        "type": "output"
+                    },
+                    "port2": {
+                        "connected": false,
+                        "from": "",
+                        "id": "port2",
+                        "position": {
+                            "x": 250,
+                            "y": 0
+                        },
+                        "properties": {},
+                        "to": "",
+                        "type": "input"
+                    },
+                    "port3": {
+                        "id": "port3",
+                        "type": "output",
+                        "connected": false,
+                        "properties": {
+                            "value": ""
+                        },
+                        "position": {
+                            "x": 265,
+                            "y": 353
+                        }
+                    }
+                }
+            },
+            "node2": {
+                "id": "node2",
+                "type": "node",
+                "name": "New node2",
+                "text": "Your Node Description",
+                "displayType": "screen",
+                "path": "/no_image.png",
+                "picture": "no_image.png",
+                "position": {
+                    "x": 1992.7333333333331,
+                    "y": 2211.206832298137
+                },
+                "size": {
+                    "width": 500,
+                    "height": 353
+                },
+                "ports": {
+                    "port1": {
+                        "connected": false,
+                        "from": "",
+                        "id": "port1",
+                        "position": {
+                            "x": 250,
+                            "y": 353
+                        },
+                        "properties": {},
+                        "to": "",
+                        "type": "output"
+                    },
+                    "port2": {
+                        "connected": false,
+                        "from": "",
+                        "id": "port2",
+                        "position": {
+                            "x": 250,
+                            "y": 0
+                        },
+                        "properties": {},
+                        "to": "",
+                        "type": "input"
+                    }
+                }
+            },
+            "node3": {
+                "id": "node3",
+                "type": "node",
+                "name": "Flowy Backend Server",
+                "text": "backendserver handling the data and projects.",
+                "displayType": "screen",
+                "path": "/no_image.png",
+                "picture": "no_image.png",
+                "position": {
+                    "x": 2822.7132793824485,
+                    "y": 1715.4044465934137
+                },
+                "size": {
+                    "width": 500,
+                    "height": 353
+                },
+                "ports": {
+                    "port1": {
+                        "connected": false,
+                        "from": "",
+                        "id": "port1",
+                        "position": {
+                            "x": 235,
+                            "y": 353
+                        },
+                        "properties": {
+                            "value": "import from backend"
+                        },
+                        "to": "",
+                        "type": "output"
+                    },
+                    "port2": {
+                        "connected": false,
+                        "from": "",
+                        "id": "port2",
+                        "position": {
+                            "x": 235,
+                            "y": 0
+                        },
+                        "properties": {
+                            "value": "export to backend"
+                        },
+                        "to": "",
+                        "type": "input"
+                    },
+                    "port3": {
+                        "id": "port3",
+                        "type": "output",
+                        "connected": false,
+                        "properties": {
+                            "value": ""
+                        },
+                        "position": {
+                            "x": 265,
+                            "y": 353
+                        }
+                    },
+                    "port4": {
+                        "id": "port4",
+                        "type": "input",
+                        "connected": false,
+                        "properties": {
+                            "value": ""
+                        },
+                        "position": {
+                            "x": 265,
+                            "y": 0
+                        }
+                    }
+                }
+            },
+            "node4": {
+                "id": "node4",
+                "type": "node",
+                "name": "flowy sketchplugin",
+                "text": "the sketch plugin for import and export ",
+                "displayType": "screen",
+                "path": "/no_image.png",
+                "picture": "no_image.png",
+                "position": {
+                    "x": 2008.2566044688685,
+                    "y": 1759.8260723461908
+                },
+                "size": {
+                    "width": 500,
+                    "height": 353
+                },
+                "ports": {
+                    "port1": {
+                        "connected": false,
+                        "from": "",
+                        "id": "port1",
+                        "position": {
+                            "x": 235,
+                            "y": 353
+                        },
+                        "properties": {},
+                        "to": "",
+                        "type": "output"
+                    },
+                    "port2": {
+                        "connected": false,
+                        "from": "",
+                        "id": "port2",
+                        "position": {
+                            "x": 235,
+                            "y": 0
+                        },
+                        "properties": {},
+                        "to": "",
+                        "type": "input"
+                    },
+                    "port3": {
+                        "id": "port3",
+                        "type": "input",
+                        "connected": false,
+                        "properties": {
+                            "value": "import from backend"
+                        },
+                        "position": {
+                            "x": 265,
+                            "y": 0
+                        }
+                    },
+                    "port4": {
+                        "id": "port4",
+                        "type": "output",
+                        "connected": false,
+                        "properties": {
+                            "value": "export to backend"
+                        },
+                        "position": {
+                            "x": 265,
+                            "y": 353
+                        }
+                    }
+                }
+            }
+        },
+        "links": {
+            "7b303508-957b-4204-bffd-a09fcf67fa9f": {
+                "id": "7b303508-957b-4204-bffd-a09fcf67fa9f",
+                "from": {
+                    "nodeId": "node4",
+                    "portId": "port1"
+                },
+                "to": {
+                    "nodeId": "node2",
+                    "portId": "port2"
+                }
+            },
+            "83737cf8-67fb-4b5f-a170-0da0c3f865d4": {
+                "id": "83737cf8-67fb-4b5f-a170-0da0c3f865d4",
+                "from": {
+                    "nodeId": "node4",
+                    "portId": "port2"
+                },
+                "to": {
+                    "nodeId": "node1",
+                    "portId": "port1"
+                }
+            },
+            "872b9c8c-adbe-4c6d-aa32-6d193854eed8": {
+                "id": "872b9c8c-adbe-4c6d-aa32-6d193854eed8",
+                "from": {
+                    "nodeId": "node4",
+                    "portId": "port4"
+                },
+                "to": {
+                    "nodeId": "node3",
+                    "portId": "port2"
+                },
+                "properties": {
+                    "label": "export to backend"
+                }
+            },
+            "fe2b003a-ca23-4ab2-bb80-25528b1c50c4": {
+                "id": "fe2b003a-ca23-4ab2-bb80-25528b1c50c4",
+                "from": {
+                    "nodeId": "node4",
+                    "portId": "port3"
+                },
+                "to": {
+                    "nodeId": "node3",
+                    "portId": "port1"
+                },
+                "properties": {
+                    "label": "import from backend"
+                }
+            },
+            "c7800068-6db3-4f0c-8bdc-e2c8dd483d3b": {
+                "id": "c7800068-6db3-4f0c-8bdc-e2c8dd483d3b",
+                "from": {
+                    "nodeId": "node3",
+                    "portId": "port3"
+                },
+                "to": {
+                    "nodeId": "node1",
+                    "portId": "port2"
+                }
+            },
+            "5668e31f-05a2-43b7-9dda-33405948b918": {
+                "id": "5668e31f-05a2-43b7-9dda-33405948b918",
+                "from": {
+                    "nodeId": "node1",
+                    "portId": "port3"
+                },
+                "to": {
+                    "nodeId": "node3",
+                    "portId": "port4"
+                }
+            }
+        },
+        "selected": {},
+        "hovered": {},
+        "scale": 0.493
+    }
+}

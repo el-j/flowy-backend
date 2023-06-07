@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "^8.4.8",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dom-parser": "^0.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.10",
+    "express-state": "^1.4.0",
+    "jsdom": "^16.2.2",
+    "lodash": "^4.17.19",
+    "mkdirp": "^1.0.3",
+    "multer": "^1.4.2",
+    "parse5": "^5.1.1",
+    "rimraf": "^3.0.2",
+    "svgson": "^4.0.0",
+    "uuid": "^7.0.2",
+    "xmlserializer": "^0.6.1"
+  }
+}

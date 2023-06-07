@@ -1,0 +1,29 @@
+  graph TD
+
+  IAA_Screen_01_WelcomeLastUser[WelcomeLastUser]-->d0{Nutzerwechsel?}
+  d0 -->|no|UserHomeScreen
+  d0 -->|yes|IAA_Screen_02_ChangeUser
+  IAA_Screen_02_ChangeUser--> d1{New User?}
+  d1 -->|no|IAA_Screen_01_WelcomeLastUser
+  d1 -->|yes|IAA_Screen_03_01_WelcomeToWeConnect
+
+  IAA_Screen_03_01_WelcomeToWeConnect[WelcomeToWeConnect]-->d3{more Infos?}
+  d3 -->|yes|IAA_Screen_03_02_WelcomeToWeConnectMoreInfo[WelcomeToWeConnectMoreInfo]
+  d3 -->|no|IAA_Screen_04_01_Loading
+  IAA_Screen_04_01_Loading[Loading]-->IAA_Screen_05_showIDKFlow_QR
+  IAA_Screen_05_showIDKFlow_QR[IDK QR]-->d5{mail?}
+  d5 --> |yes|IAA_Screen_05_showIDKFlow_Mail
+  IAA_Screen_05_showIDKFlow_Mail --> d6{Missing UserData?}
+  d6 -->|no|IAA_Screen_06_LoginLoading_01_Progress_S-Pin_True
+  d6 -->|yes|IAA_Screen_06_01_MissingDataError
+  IAA_Screen_06_01_MissingDataError-->QrCode(QrCode)
+  IAA_Screen_06_01_MissingDataError-->LoginAbbrechen(Login Abbrechen)
+  IAA_Screen_06_01_MissingDataError-->IAA_Screen_06_02_MissingDataError
+
+  LoginAbbrechen(Login Abbrechen)-->IAA_Screen_01_WelcomeLastUser
+
+  d5 --> |no|IAA_Screen_06_LoginLoading_01_Progress_S-Pin_True
+
+  IAA_Screen_06_LoginLoading_01_Progress_S-Pin_True-->IAA_Screen_06_LoginLoading_02_Progress_S-Pin_False
+  IAA_Screen_06_LoginLoading_02_Progress_S-Pin_False --> IAA_Screen_07_LoginSucces_Loading_SPIN
+  IAA_Screen_07_LoginSucces_Loading_SPIN -->IAA_Screen_08_LoginSucces_Loading_Done[Login Done]

@@ -1,0 +1,154 @@
+{
+    "projectId": "undefined",
+    "name": "danner",
+    "description": "nice undefined",
+    "files": [],
+    "projectJson": {
+        "offset": {
+            "x": 386.51,
+            "y": 222.45
+        },
+        "nodes": {
+            "node1": {
+                "id": "node1",
+                "type": "node",
+                "name": "Danner01",
+                "text": "blablaba",
+                "displayType": "screen",
+                "path": "/no_image.png",
+                "picture": "no_image.png",
+                "picId": "node1_picId",
+                "position": {
+                    "x": null,
+                    "y": null
+                },
+                "size": {
+                    "width": 500,
+                    "height": 353
+                },
+                "ports": {
+                    "port1": {
+                        "id": "port1",
+                        "type": "input",
+                        "properties": {
+                            "value": "yes"
+                        },
+                        "position": {
+                            "x": 250,
+                            "y": 0
+                        }
+                    },
+                    "port2": {
+                        "id": "port2",
+                        "type": "output",
+                        "properties": {
+                            "value": "no"
+                        },
+                        "position": {
+                            "x": 250,
+                            "y": 353
+                        }
+                    }
+                },
+                "picSize": {
+                    "height": 224,
+                    "width": 500
+                }
+            },
+            "node2": {
+                "id": "node2",
+                "type": "node",
+                "name": "is it nice?",
+                "text": "if it is nice or note",
+                "displayType": "decision",
+                "path": "/no_image.png",
+                "picture": "no_image.png",
+                "picId": "node2_picId",
+                "position": {
+                    "x": 149.64523281596453,
+                    "y": 522.2838137472281
+                },
+                "size": {
+                    "width": 200,
+                    "height": 200
+                },
+                "ports": {
+                    "port1": {
+                        "id": "port1",
+                        "type": "input",
+                        "properties": {
+                            "value": "no"
+                        },
+                        "position": {
+                            "x": 100,
+                            "y": 0
+                        }
+                    },
+                    "port2": {
+                        "id": "port2",
+                        "type": "output",
+                        "properties": {
+                            "value": "no"
+                        },
+                        "position": {
+                            "x": 85,
+                            "y": 200
+                        }
+                    },
+                    "port3": {
+                        "id": "port3",
+                        "type": "output",
+                        "properties": {
+                            "value": "yes"
+                        },
+                        "position": {
+                            "x": 115,
+                            "y": 200
+                        }
+                    }
+                }
+            }
+        },
+        "links": {
+            "3570e706-3141-4018-8111-6bcf2d1c310d": {
+                "id": "3570e706-3141-4018-8111-6bcf2d1c310d",
+                "from": {
+                    "nodeId": "node1",
+                    "portId": "port2"
+                },
+                "to": {
+                    "nodeId": "node2",
+                    "portId": "port1"
+                }
+            },
+            "e1589328-5549-4402-8113-74cfb5ea784e": {
+                "id": "e1589328-5549-4402-8113-74cfb5ea784e",
+                "from": {
+                    "nodeId": "node2",
+                    "portId": "port1"
+                },
+                "to": {
+                    "nodeId": "node1",
+                    "portId": "port2"
+                }
+            },
+            "9ca12dbf-fabd-4c36-aea0-17b66efe1a06": {
+                "id": "9ca12dbf-fabd-4c36-aea0-17b66efe1a06",
+                "from": {
+                    "nodeId": "node1",
+                    "portId": "port2"
+                },
+                "to": {
+                    "nodeId": "node2",
+                    "portId": "port1"
+                }
+            }
+        },
+        "selected": {},
+        "hovered": {
+            "type": "node",
+            "id": "node1"
+        },
+        "scale": 0.451
+    }
+}
