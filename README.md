@@ -3,7 +3,7 @@
 ## Express
 
 the backend server is written in express.
-i can be started with
+it can be started with
 
 ```
 node index.js
