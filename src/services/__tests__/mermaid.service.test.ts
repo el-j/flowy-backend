@@ -17,7 +17,7 @@ A-->B
 B-->C`;
 
       const connections = await service.parseConnections(mermaidContent);
-      
+
       expect(connections).toHaveLength(2);
       expect(connections[0]).toEqual({
         from: 'A',
@@ -37,7 +37,7 @@ A-->|label1|B
 B-->|label2|C`;
 
       const connections = await service.parseConnections(mermaidContent);
-      
+
       expect(connections).toHaveLength(2);
       expect(connections[0].connectionLabel).toBe('label1');
       expect(connections[1].connectionLabel).toBe('label2');
@@ -51,7 +51,7 @@ C{Diamond}-->D
 D((Circle))-->E`;
 
       const connections = await service.parseConnections(mermaidContent);
-      
+
       expect(connections).toHaveLength(4);
       expect(connections[0].from).toBe('A');
       expect(connections[1].from).toBe('B');
@@ -146,7 +146,7 @@ D((Circle))-->E`;
 
       const links = service.makeLinks(connections, nodes);
       expect(Object.keys(links).length).toBeGreaterThan(0);
-      
+
       const firstLink = Object.values(links)[0];
       expect(firstLink.from.nodeId).toBe('node1');
       expect(firstLink.to.nodeId).toBe('node2');

@@ -97,7 +97,9 @@ export class App {
         `🚀 Flowy Backend listening on http://${config.server.name}:${config.server.port}`
       );
       logger.info(`📁 Projects directory: ${config.projectsDir}`);
-      logger.info(`🌐 Frontend expected at http://${config.app.name}:${config.app.port}`);
+      logger.info(
+        `🌐 Frontend expected at http://${config.app.name}:${config.app.port}`
+      );
     });
   }
 }

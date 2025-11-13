@@ -94,8 +94,7 @@ export class ProjectService {
 
         if (stats.isFile()) {
           const extension = this.fileSystem.getFileExtension(file);
-          const filename =
-            this.fileSystem.getFilenameWithoutExtension(file);
+          const filename = this.fileSystem.getFilenameWithoutExtension(file);
 
           project.files.push({
             filename,
@@ -198,9 +197,7 @@ export class ProjectService {
           if (nodeName.includes(fileName)) {
             node.picture = `${file.filename}.${file.type}`;
             node.path = `${projectName}/${file.filename}.${file.type}`;
-            logger.info(
-              `Updated node ${nodeId} with picture: ${node.picture}`
-            );
+            logger.info(`Updated node ${nodeId} with picture: ${node.picture}`);
           }
         }
       }
@@ -223,10 +220,7 @@ export class ProjectService {
       `${project.projectId}.json`
     );
 
-    await this.fileSystem.writeFile(
-      jsonPath,
-      JSON.stringify(project, null, 2)
-    );
+    await this.fileSystem.writeFile(jsonPath, JSON.stringify(project, null, 2));
 
     this.projects.set(project.projectId, project);
     logger.info(`Saved project: ${project.projectId}`);

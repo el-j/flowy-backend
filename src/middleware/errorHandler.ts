@@ -30,7 +30,9 @@ export const errorHandler = (
   }
 
   // Unexpected errors
-  logger.error(`500 - ${err.message} - ${req.originalUrl}`, { stack: err.stack });
+  logger.error(`500 - ${err.message} - ${req.originalUrl}`, {
+    stack: err.stack,
+  });
   return res.status(500).json({
     error: {
       message: 'Internal server error',

@@ -45,9 +45,7 @@ describe('ProjectService', () => {
       const projectName = 'duplicate-project';
       await projectService.createProject(projectName);
 
-      await expect(
-        projectService.createProject(projectName)
-      ).rejects.toThrow();
+      await expect(projectService.createProject(projectName)).rejects.toThrow();
     });
   });
 
@@ -76,7 +74,7 @@ describe('ProjectService', () => {
       await projectService.createProject('project2');
 
       const projects = await projectService.getAllProjects();
-      
+
       expect(Object.keys(projects)).toContain('project1');
       expect(Object.keys(projects)).toContain('project2');
     });
@@ -84,18 +82,21 @@ describe('ProjectService', () => {
     it('should include file information', async () => {
       const projectName = 'project-with-files';
       await projectService.createProject(projectName);
-      
+
       // Add test files
       const projectPath = path.join(testProjectsDir, projectName);
       await fs.writeFile(path.join(projectPath, 'test.png'), 'fake-image');
-      await fs.writeFile(path.join(projectPath, 'diagram.mmd'), 'graph TD\nA-->B');
+      await fs.writeFile(
+        path.join(projectPath, 'diagram.mmd'),
+        'graph TD\nA-->B'
+      );
 
       const projects = await projectService.getAllProjects();
       const project = projects[projectName];
 
       expect(project.files).toHaveLength(2);
-      expect(project.files.some(f => f.type === 'png')).toBe(true);
-      expect(project.files.some(f => f.type === 'mmd')).toBe(true);
+      expect(project.files.some((f) => f.type === 'png')).toBe(true);
+      expect(project.files.some((f) => f.type === 'mmd')).toBe(true);
     });
   });
 
@@ -149,7 +150,7 @@ describe('ProjectService', () => {
       await fs.writeFile(path.join(projectPath, 'image2.png'), 'fake-image');
 
       const project = await projectService.loadProject(projectName);
-      
+
       expect(project.projectJson).toBeDefined();
       expect(Object.keys(project.projectJson?.nodes || {}).length).toBe(2);
     });

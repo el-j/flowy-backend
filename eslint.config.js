@@ -5,6 +5,25 @@ import prettier from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 
 export default [
+  {
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      'coverage/**',
+      '**/*.old.js',
+      '**/*.old.md',
+      'config.js',
+      'index.js',
+      'models/**',
+      'src/__DEPRECATED__files/**',
+      'src/mermaid/**',
+      'src/user.routes.js',
+      'src/projects.js',
+      '**/__tests__/**',
+      '**/*.test.ts',
+      '**/*.spec.ts',
+    ],
+  },
   js.configs.recommended,
   {
     files: ['src/**/*.ts'],
@@ -13,7 +32,6 @@ export default [
       parserOptions: {
         ecmaVersion: 2022,
         sourceType: 'module',
-        project: './tsconfig.json',
       },
       globals: {
         console: 'readonly',
